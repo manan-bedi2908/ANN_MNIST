@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow.keras.datasets import mnist
 import os
+import logging
 
 
 def load_data():

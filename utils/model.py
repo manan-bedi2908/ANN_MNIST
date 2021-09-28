@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow.keras.datasets import mnist
+import logging
 
 
 class MNIST_DIGIT:
@@ -46,4 +47,5 @@ class MNIST_DIGIT:
         y_prob = model_clf.predict(X_new)
         y_prob.round(3)
         Y_pred = np.argmax(y_prob, axis=-1)
+        logging.info(f"For {X_new}, predictions are: {Y_pred}")
         return Y_pred
